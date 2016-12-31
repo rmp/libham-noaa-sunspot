@@ -1,0 +1,8 @@
+Build.PL
+lib/Ham/NOAA/Sunspot.pm
+LICENSE
+MANIFEST			This list of files
+t/dist/critic.t
+t/dist/distribution.t
+t/dist/pod.t
+t/dist/podcoverage.t

@@ -1,0 +1,9 @@
+tap-harness-junit.xml
+blib
+_build
+Build
+META.yml
+META.json
+MYMETA.yml
+MYMETA.json
+MANIFEST.SKIP.bak
