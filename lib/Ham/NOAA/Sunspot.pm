@@ -163,12 +163,6 @@ $VERSION
 
 =head1 BUGS AND LIMITATIONS
 
-ClearPress is not an implementation of the classic MVC pattern, in
-particular ClearPress views are more like classic MVC controllers, so
-if you're expecting that, you may be disappointed. Having said that it
-has been used extremely effectively in rapid development of a number
-of production applications.
-
 =head1 AUTHOR
 
 Roger Pettett, E<lt>rpettett@cpan.orgE<gt>
