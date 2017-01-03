@@ -12,6 +12,8 @@ use lib qw(lib);
 use Ham::NOAA::Sunspot;
 use Test::More tests => 1;
 
+our $VERSION = q[0.0.2];
+
 {
   my $o = Ham::NOAA::Sunspot->new();
 

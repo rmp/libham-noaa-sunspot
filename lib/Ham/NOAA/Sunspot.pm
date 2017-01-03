@@ -10,7 +10,7 @@ use warnings;
 use LWP::UserAgent;
 
 our $DEFAULT_URL = q[http://services.swpc.noaa.gov/text/predicted-sunspot-radio-flux.txt];
-our $VERSION = q[0.0.1];
+our $VERSION = q[0.0.2];
 
 sub new {
   my ($class, $ref) = @_;
