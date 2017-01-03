@@ -23,7 +23,10 @@ sub new {
 }
 
 sub url {
-  my ($self) = @_;
+  my ($self, $url) = @_;
+  if(defined $url) {
+    $self->{url} = $url;
+  }
   return $self->{url} || $DEFAULT_URL;
 }
 
@@ -119,13 +122,23 @@ $VERSION
 
 =head1 SUBROUTINES/METHODS
 
-=head2 new
+=head2 new - constructor, takes a hashref of options
 
-=head2 url
+  my $oHNS = Ham::NOAA::Sunspot->new();
 
-=head2 sunspot_by_year_month
+  my $oHNS = Ham::NOAA::Sunspot->new({
+    url => 'http://services.swpc.noaa.gov/text/predicted-sunspot-radio-flux.txt',
+  });
 
-=head2 flux_by_year_month
+=head2 url - get/set URL to use for sunspot data
+
+=head2 sunspot_by_year_month - fetch sunspot data for a given numeric year and month
+
+  my $hrSunspotData = $oHNS->sunspot_by_year_month(2017, 1);
+
+=head2 flux_by_year_month - fetch 10GHz flux data for a given numeric year and month
+
+  my $hrFluxData = $oHNS->flux_by_year_month(2017, 1);
 
 =head1 DIAGNOSTICS
 
