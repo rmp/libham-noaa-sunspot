@@ -11,6 +11,7 @@ use LWP::UserAgent;
 
 our $DEFAULT_URL = q[http://services.swpc.noaa.gov/text/predicted-sunspot-radio-flux.txt];
 our $VERSION = q[0.0.1];
+
 sub new {
   my ($class, $ref) = @_;
   if(!ref $ref) {
@@ -100,3 +101,70 @@ sub flux_by_year_month {
   return $self->_by_year_month->{0+$year}->{0+$month}->{flux};
 }
 1;
+
+=head1 NAME
+
+Ham::NOAA::Sunspot - process sunspot prediction data from NOAA FTP/Website
+
+=head1 VERSION
+
+$VERSION
+
+=head1 SYNOPSIS
+
+=head1 DESCRIPTION
+
+=head1 SUBROUTINES/METHODS
+
+=head2 new
+
+=head2 url
+
+=head2 sunspot_by_year_month
+
+=head2 flux_by_year_month
+
+=head1 DIAGNOSTICS
+
+=head1 CONFIGURATION AND ENVIRONMENT
+
+ Honours http_proxy, https_proxy and no_proxy settings as per
+ LWP::UserAgent
+
+=head1 DEPENDENCIES
+
+=over
+
+=item strict
+
+=item warnings
+
+=item LWP::UserAgent
+
+=back
+
+=head1 INCOMPATIBILITIES
+
+=head1 BUGS AND LIMITATIONS
+
+ClearPress is not an implementation of the classic MVC pattern, in
+particular ClearPress views are more like classic MVC controllers, so
+if you're expecting that, you may be disappointed. Having said that it
+has been used extremely effectively in rapid development of a number
+of production applications.
+
+=head1 AUTHOR
+
+Roger Pettett, E<lt>rpettett@cpan.orgE<gt>
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright (c) 2017 Roger Pettett
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+=cut
