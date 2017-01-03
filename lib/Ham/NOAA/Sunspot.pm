@@ -100,7 +100,10 @@ sub flux_by_year_month {
 
   return $self->_by_year_month->{0+$year}->{0+$month}->{flux};
 }
+
 1;
+
+__END__
 
 =head1 NAME
 
